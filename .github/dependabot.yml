@@ -1,0 +1,36 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "12:00"
+    timezone: EST
+  open-pull-requests-limit: 10
+  reviewers:
+  - karelhala
+  allow:
+  - dependency-name: "@redhat-cloud-services/frontend*"
+  - dependency-name: "@patternfly/*"
+    dependency-type: direct
+  ignore:
+  - dependency-name: "@patternfly/patternfly"
+    versions:
+    - 4.102.1
+    - 4.80.3
+    - 4.87.2
+    - 4.87.3
+    - 4.90.5
+    - 4.96.2
+  - dependency-name: "@patternfly/react-core"
+    versions:
+    - 3.158.4
+  - dependency-name: "@redhat-cloud-services/frontend-components-utilities"
+    versions:
+    - 2.0.5
+  - dependency-name: "@patternfly/react-table"
+    versions:
+    - 4.3.8
+  - dependency-name: "@redhat-cloud-services/frontend-components"
+    versions:
+    - 1.0.29
